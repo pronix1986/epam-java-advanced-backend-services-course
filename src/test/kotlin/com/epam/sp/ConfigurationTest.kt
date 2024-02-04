@@ -39,4 +39,5 @@ class ConfigurationTest {
                 assertThat(context).doesNotHaveBean(DataSource::class.java)
             }
     }
+
 }
