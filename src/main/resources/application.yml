@@ -18,3 +18,12 @@ spring:
   h2:
     console:
       enabled: true
+
+
+# Task 4.5. Only 2 endpoints (/health and custom endpoint above) should be exposed.
+# Apply these changes for both environments (local and dev) by using a base configuration file.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, appinfo

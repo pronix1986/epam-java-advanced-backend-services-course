@@ -1,0 +1,8 @@
+# Task 3.1. Create a configuration files for two environments (local, dev)
+# Task 3.2. Define database connection properties (url, username, password) in each file.
+
+app:
+  datasource:
+    url: "jdbc:h2:file:./data/local"
+    username: "admin"
+    password: "admin"
