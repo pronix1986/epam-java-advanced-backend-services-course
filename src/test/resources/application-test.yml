@@ -1,0 +1,12 @@
+# Task 3.3. Create additional configuration file for test profile (under /test/java/resources folder)
+
+app:
+  datasource:
+    url: "jdbc:h2:file:/data/test"
+    username: "test"
+    password: "test"
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: "create-drop"
