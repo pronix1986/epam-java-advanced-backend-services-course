@@ -3,13 +3,20 @@ package com.epam.sp
 import com.epam.sp.jpa.entities.Order
 import com.epam.sp.jpa.repositories.OrderRepository
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
+import org.springframework.context.annotation.ComponentScan
+import org.springframework.test.context.ActiveProfiles
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
 
 @DataJpaTest
-class SimpleJpaTest(@Autowired val orderRepository: OrderRepository) {
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+@ActiveProfiles("test")
+@ComponentScan("com.epam.sp")
+class SimpleJpaTest(
+    @Autowired val orderRepository: OrderRepository) {
 
     // Task 1.3. Add test which tests your application
     // by saving an entity to the data source(@DataJpaTest/@DataJdbcTest).

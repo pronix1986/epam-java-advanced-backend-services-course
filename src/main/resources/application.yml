@@ -6,6 +6,7 @@ app:
     jdbc-url: ${app.datasource.url} # for Hikari
     username: "sa"
     password: ""
+    enabled: true
 
 spring:
   jpa:
