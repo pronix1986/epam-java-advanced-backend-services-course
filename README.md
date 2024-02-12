@@ -54,6 +54,20 @@ Created a module :grpc:server-java which start gRPC server on port 8080.
 Created modules :grpc:client-java and :grpc:client-kotlin with gRPC clients in two different languages in a form of unit tests.
 
 
+# Task 2.2 - Avro part
+In this task, you need to create a Kafka producer and consumer using Avro to serialize messages.
+Create a simple Kafka producer that sends a simple message to a topic serializing it using Avro.
+Create a simple Kafka consumer which listens to a topic for a message, deserializes the message, and prints it.
+Start Kafka, create a topic, and run consumer and producer.
+Try to use different Avro schemas for serialization and deserialization. Observe that
+schema version/id has changed e.g. in schema registry and kafka message payload(bytes 1-4).
+
+# Solution - Task 2.1
+Created :avro module with the dummy Spring configuration and a test class with all the implementation details.
+GenericRecords are used purely for testing purposes.
+Value topic naming strategy is changed from the default to TopicRecordNamingStrategy which is normally used when the same topic holds the values of different types.
+Since Kotlin is used as a programming language, so that kotlinx-serialization provides a serialization mechanisms and Avro4k is used specifically to operate with Avro.
+
 
 
 

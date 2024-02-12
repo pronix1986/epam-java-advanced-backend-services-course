@@ -26,3 +26,5 @@ include("task2:grpc:client-java")
 findProject(":task2:grpc:client-java")?.name = "client-java"
 include("task2:grpc:client-kotlin")
 findProject(":task2:grpc:client-kotlin")?.name = "client-kotlin"
+include("task2:avro")
+findProject(":task2:avro")?.name = "avro"
