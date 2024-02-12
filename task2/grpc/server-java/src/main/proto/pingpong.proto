@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package com.epam.sp.proto.pingpong;
+
+message PingRequest {
+  string message = 1;
+}
+
+message PongResponse {
+  string message = 1;
+}
+
+service PingPongService {
+  rpc play(PingRequest) returns (PongResponse);
+}
