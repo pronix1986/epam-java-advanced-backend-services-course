@@ -9,7 +9,6 @@ open module jmp.cloud.service.impl {
     requires jmp.dto;
     requires spring.context;
     requires spring.data.jpa;
-    requires modelmapper;
     requires spring.beans;
     requires spring.core;
 

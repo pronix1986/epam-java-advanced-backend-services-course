@@ -6,7 +6,6 @@ open module jmp.service.rest {
     requires spring.hateoas;
     requires spring.context;
     requires spring.webmvc;
-    requires modelmapper;
     requires spring.core;
     requires io.swagger.v3.oas.annotations;
 
