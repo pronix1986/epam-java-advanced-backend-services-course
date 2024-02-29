@@ -69,6 +69,10 @@ Value topic naming strategy is changed from the default to TopicRecordNamingStra
 Since Kotlin is used as a programming language, so that kotlinx-serialization provides a serialization mechanisms and Avro4k is used specifically to operate with Avro.
 
 
+# Task 3
+... A lot of stuff to do. See 'learn' portal
 
+# Solution - Task3
+Created a dedicated README.md under task3 module
 
 
