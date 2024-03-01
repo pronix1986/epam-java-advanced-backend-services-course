@@ -76,3 +76,8 @@ Since Kotlin is used as a programming language, so that kotlinx-serialization pr
 Created a dedicated README.md under task3 module
 
 
+# Task 4 
+... A lot of stuff to do. See 'learn' portal
+
+# Solution - Task4
+Created a dedicated README.md under task4 module
