@@ -26,9 +26,16 @@ Updated `SecurityConfig` to use `JdbcUserDetailsManager`.\
 Before running the application, launch `docker compose up` (or `docker-compose up` for Podman)
 The results are exactly the same as in 3.
 
-5. Use salt and hashing to store user passwords.
+5. Use salt and hashing to store user passwords. 
+Did it from the start by using `DelegatingPasswordEncoder` and `bcrypt` password value. Bcrypt already assumes salt+hash techniques.
+
 6. Create additional REST endpoint "GET /about" and configure non-authenticated access to it.
    (3-4 starts)
+Created `AboutController`. PermitAll is set in Security filter chain for `/about` endpoint.
+![img_3.png](img_3.png)
+Any other page:
+![img_4.png](img_4.png)
+
 7. Create one more REST endpoint "GET /admin".
 8. Now you need to add authorised access to "GET /info" and "GET /admin", add "VIEW_INFO", "VIEW_ADMIN" permissions for it. Create 3 users with different combination of permissions.
 9. Create new Login/Logout pages and configure Spring Security to use new Login/Logout.
