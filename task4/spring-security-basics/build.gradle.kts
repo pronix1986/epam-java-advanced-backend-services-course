@@ -29,11 +29,12 @@ dependencies {
     implementation("com.jayway.jsonpath:json-path:2.9.0")
 
     runtimeOnly("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
-    runtimeOnly("com.h2database:h2:2.2.224")
+    runtimeOnly("org.postgresql:postgresql:42.7.2")
 
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation(kotlin("test"))
+    testRuntimeOnly("com.h2database:h2:2.2.224")
 }
 
 tasks.test {

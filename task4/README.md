@@ -20,6 +20,12 @@ c. Expected results:
 ![img_2.png](img_2.png)
 
 4. Use a non-embedded DB to store users.
+Added `compose.yml` file with a basic Postgresql setup. \.
+Configured datasource (in `application.yml`), set initialization scripts (`schema/data.sql`).\
+Updated `SecurityConfig` to use `JdbcUserDetailsManager`.\
+Before running the application, launch `docker compose up` (or `docker-compose up` for Podman)
+The results are exactly the same as in 3.
+
 5. Use salt and hashing to store user passwords.
 6. Create additional REST endpoint "GET /about" and configure non-authenticated access to it.
    (3-4 starts)
