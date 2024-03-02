@@ -5,9 +5,20 @@ Done. Created a new module `spring-security-basics`
 
 2. Create REST endpoint "GET /info" that provide random stats (ex: "MVC application"). Test this endpoint.
 Done. Created `InfoController` with the only `/info` endpoint. The only statistics it provides is `process.cpu.usage` taken from Actuator.
+Results:
+![img.png](img.png)
 
 3. Add Spring Security module to your project and configure it for authenticated access to all resources. Use email/password combination for it.
    (2 starts)
+Created `SecurityConfig` with a `SecurityFilterChain` set to authenticate any request `authorize(anyRequest, authenticated)`
+Now: \
+a. Start `http://localhost:8080/info` \
+b. Redirect to login page:
+![img_1.png](img_1.png)
+Enter `user/password`
+c. Expected results:
+![img_2.png](img_2.png)
+
 4. Use a non-embedded DB to store users.
 5. Use salt and hashing to store user passwords.
 6. Create additional REST endpoint "GET /about" and configure non-authenticated access to it.
