@@ -3,6 +3,7 @@ package com.epam.sp.configuration
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.http.HttpMethod
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
@@ -21,8 +22,8 @@ class SecurityConfig {
     fun filterChain(http: HttpSecurity): SecurityFilterChain {
         http {
             authorizeHttpRequests {
-                authorize("/about", permitAll)
-                authorize("/about/**", permitAll)
+                authorize(HttpMethod.GET, "/about", hasRole("VIEW_INFO"))
+                authorize(HttpMethod.GET, "/admin", hasRole("VIEW_ADMIN"))
                 authorize(anyRequest, authenticated)
             }
             formLogin { }

@@ -37,7 +37,22 @@ Any other page:
 ![img_4.png](img_4.png)
 
 7. Create one more REST endpoint "GET /admin".
-8. Now you need to add authorised access to "GET /info" and "GET /admin", add "VIEW_INFO", "VIEW_ADMIN" permissions for it. Create 3 users with different combination of permissions.
+8. Now you need to add authorised access to "GET /info" and "GET /admin", add "VIEW_INFO", "VIEW_ADMIN" permissions for it. Create 3 users with different combination of permissions.\
+Created `AdminController`.\
+Set 3 users with password=`password`: \
+user - no required permissions\
+info - VIEW_INFO permission\
+admin - VIEW_INFO, VIEW_ADMIN permissions\
+Created a custom page for 403 response\
+Login as user (both /about and /admin):\
+![img_5.png](img_5.png)
+Login as info:\
+![img_6.png](img_6.png)
+![img_7.png](img_7.png)
+Login as admin:\
+![img_8.png](img_8.png)
+
+
 9. Create new Login/Logout pages and configure Spring Security to use new Login/Logout.
 10. Add Brute Force protector. BLock user email for 5 minute on 3 unsuccessful login.
 11. Create an endpoint to show blocked users
