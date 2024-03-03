@@ -22,7 +22,7 @@ class SecurityConfig {
     fun filterChain(http: HttpSecurity): SecurityFilterChain {
         http {
             authorizeHttpRequests {
-                authorize(HttpMethod.GET, "/about", hasRole("VIEW_INFO"))
+                authorize(HttpMethod.GET, "/info", hasRole("VIEW_INFO"))
                 authorize(HttpMethod.GET, "/admin", hasRole("VIEW_ADMIN"))
                 authorize(anyRequest, authenticated)
             }
