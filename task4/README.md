@@ -52,8 +52,12 @@ Login as info:\
 Login as admin:\
 ![img_8.png](img_8.png)
 
-
 9. Create new Login/Logout pages and configure Spring Security to use new Login/Logout.
+Created a single `login.html` which is displayed on both login and logout
+![img_9.png](img_9.png)
+Logout: http://localhost:8080/any_valid_path/logout
+![img_10.png](img_10.png)
+
 10. Add Brute Force protector. BLock user email for 5 minute on 3 unsuccessful login.
 11. Create an endpoint to show blocked users
     (5 start)

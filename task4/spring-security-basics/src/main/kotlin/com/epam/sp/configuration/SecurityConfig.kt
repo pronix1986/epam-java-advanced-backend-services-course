@@ -21,12 +21,23 @@ class SecurityConfig {
     @Bean
     fun filterChain(http: HttpSecurity): SecurityFilterChain {
         http {
+            csrf {
+                disable()
+            }
             authorizeHttpRequests {
                 authorize(HttpMethod.GET, "/info", hasRole("VIEW_INFO"))
                 authorize(HttpMethod.GET, "/admin", hasRole("VIEW_ADMIN"))
                 authorize(anyRequest, authenticated)
             }
-            formLogin { }
+            formLogin {
+                loginPage = "/login"
+                defaultSuccessUrl("/", false)
+                permitAll()
+            }
+            logout {
+                logoutSuccessUrl = "/login?logout"
+                permitAll()
+            }
             httpBasic { }
         }
         return http.build()
