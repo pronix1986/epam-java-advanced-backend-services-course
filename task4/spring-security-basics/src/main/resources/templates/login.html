@@ -5,10 +5,18 @@
 </head>
 <body>
 <h1>Hi. Please Log In</h1>
-<div th:if="${param.error}">
-    Invalid username and password.</div>
 <div th:if="${param.logout}">
     You have been logged out.</div>
+
+<div th:if="${param.error != null}">
+    <div th:if="${accountLocked == true}">
+        <span th:text="#{user.account.locked}"/>
+    </div>
+    <div th:unless="${accountLocked == true}">
+        <span th:text="#{login.error}"/>
+    </div>
+</div>
+
 <form th:action="@{/login}" method="post">
     <div>
         <input type="text" name="username" placeholder="Username"/>

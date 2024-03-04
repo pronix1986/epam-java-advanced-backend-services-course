@@ -28,6 +28,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 
     implementation("com.jayway.jsonpath:json-path:2.9.0")
+    implementation("com.google.guava:guava:33.0.0-jre")
 
     runtimeOnly("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
     runtimeOnly("org.postgresql:postgresql:42.7.2")

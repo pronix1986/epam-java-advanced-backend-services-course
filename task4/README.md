@@ -59,8 +59,20 @@ Logout: http://localhost:8080/any_valid_path/logout
 ![img_10.png](img_10.png)
 
 10. Add Brute Force protector. BLock user email for 5 minute on 3 unsuccessful login.
+For better testing, set 1 minutes lock instead of 5.
+Attempts 1..3:
+![img_11.png](img_11.png)
+Then:
+![img_12.png](img_12.png)
+After 60 seconds the cache is invalidated and we can start over.
+
 11. Create an endpoint to show blocked users
     (5 start)
+Implemented `/blocked-users` endpoing in `AdminController`
+![img_13.png](img_13.png)
+
+-----
 12. Implement a new Spring Boot MVC application called "Secret providers". Application should provide page with text form. After sending a secret, application must generate uniq link address, to provide one-time access to secret information. After this information must be removed from application.
 13. User (sender and recipient) must be authorized and have "STANDARD" permission.
 14. Use docker containers to implement solution.
+12-14 - NOT DONE.
