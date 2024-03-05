@@ -28,3 +28,8 @@ include("task2:grpc:client-kotlin")
 findProject(":task2:grpc:client-kotlin")?.name = "client-kotlin"
 include("task2:avro")
 findProject(":task2:avro")?.name = "avro"
+include("task4")
+include("task4:spring-security-basics")
+findProject(":task4:spring-security-basics")?.name = "spring-security-basics"
+include("task4:secret-providers")
+findProject(":task4:secret-providers")?.name = "secret-providers"
